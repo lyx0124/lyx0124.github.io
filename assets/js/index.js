@@ -1,9 +1,45 @@
+// FilePond init
+FilePond.registerPlugin(
+  FilePondPluginImagePreview,
+  FilePondPluginImageResize,
+  FilePondPluginImageTransform
+);
+const upload = document.querySelector("input");
+const fpond = FilePond.create(upload, {
+  // upload error message
+  onaddfile: (err, fileItem) => {
+    console.log(err, fileItem.getMetadata('resize'));
+  },
+  // manipulate uploaded image
+  onpreparefile: (fileItem, output) => {
+    //const image = new Image();
+    //image.src = URL.createObjectURL(output);
+    console.log(ouput);
+
+    ///////////////////////////////////////////////////////////////
+    // TODO: load image from 'output', and run the model
+    // create a session
+    const myOnnxSession = new onnx.InferenceSession();
+    // load the ONNX model file
+    myOnnxSession.loadModel("resources/models/mosaic.onnx").then(() => {
+      // generate model input
+      var inferenceInputs = image.values();
+      // execute the model
+      session.run(inferenceInputs).then(output => {
+        // consume the output
+        const outputTensor = output.values().next().value;
+        console.log(outputTensor);
+      });
+    });
+    ///////////////////////////////////////////////////////////////
+  }
+});
+
+// toggle navbar when scrolling
 $(window).scroll(function() {
   if ($(window).scrollTop() > 100) {
-    //$("#mainNav").fadeIn(500);
     $("#mainNav").removeClass("hidden");
   } else {
-    //$("#mainNav").fadeOut(500);
     $("#mainNav").addClass("hidden");
   }
 });
@@ -302,3 +338,4 @@ window.addEventListener('resize', function() {
   ctx.fillRect(0, 0, w, h)
 });
 window.addEventListener('click', init)
+// neural network visualize: https://codepen.io/towc/pen/wGjXGY

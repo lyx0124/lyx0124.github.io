@@ -8,12 +8,16 @@
   <link rel="stylesheet" href="assets/css/index.css">
   <!-- bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- FilePond styles -->
+  <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+  <!-- Add plugin styles -->
+  <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
 </head>
 
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
-      <a class="navbar-brand" href="#superstyle">SuperStyle</a>
+      <a class="navbar-brand" href="#superstyle"><img src="resources/icons/logo.png" width="50" height="50" alt="">SuperStyle</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -23,10 +27,13 @@
             <a class="nav-link" href="#intro">Introduction</a>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link" href="#ios">Version</a>
+            <a class="nav-link" href="#ios">iOS</a>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link" href="#app">Play</a>
+            <a class="nav-link" href="#app">Edit</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link" href="#links">Links</a>
           </li>
         </ul>
       </div>
@@ -35,6 +42,7 @@
 
   <main>
     <div class="container text-dark" id="heading">
+      <img src="resources/icons/logo.png" alt="">
       <h1 id="superstyle">SuperStyle</h1>
       <p>A Deep Learning Powered Photo Editing Tool</p>
       <a href="#app" class="btn btn-primary">Get Started</a>
@@ -48,11 +56,11 @@
       </div>
     </div>
 
-    <div class="row my-5" id="intro">
-      <div class="col-6 my-5 px-0">
+    <div class="row" id="intro">
+      <div class="col-6 px-0">
         <canvas id=c></canvas>
       </div>
-      <div class="col-6 my-5 px-0 d-flex justify-content-center align-items-center">
+      <div class="col-6 px-0 d-flex justify-content-center align-items-center">
         <p>Neural Style Transfer Intro</p>
       </div>
     </div>
@@ -65,8 +73,37 @@
       </div>
     </div>
 
-    <div id="ios">
-      <p>iOS version</p>
+    <div class="row" id="ios">
+      <div class="col-4">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="resources/imgs/starry.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="resources/imgs/starry.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="resources/imgs/starry.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="container">
@@ -77,15 +114,68 @@
       </div>
     </div>
 
-    <div id="app">
-      <p>web goes here</p>
+    <div class="container mb-5">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-10" id="upload">
+          <input type="file" name="upload">
+        </div>
+      </div>
     </div>
   </main>
 
+  <footer class="pt-4 my-md-5 pt-md-5 border-top" id="links">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md">
+          <img class="mb-2" src="resources/icons/logo.png" alt="" width="50" height="50">
+          <small class="d-block mb-3 text-muted">© 2017-2019</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Features</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="https://getbootstrap.com/docs/4.4/examples/pricing/#">Cool stuff</a></li>
+            <li><a class="text-muted" href="https://getbootstrap.com/docs/4.4/examples/pricing/#">Random feature</a></li>
+            <li><a class="text-muted" href="https://getbootstrap.com/docs/4.4/examples/pricing/#">Team feature</a></li>
+            <li><a class="text-muted" href="https://getbootstrap.com/docs/4.4/examples/pricing/#">Stuff for developers</a></li>
+            <li><a class="text-muted" href="https://getbootstrap.com/docs/4.4/examples/pricing/#">Another one</a></li>
+            <li><a class="text-muted" href="https://getbootstrap.com/docs/4.4/examples/pricing/#">Last time</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="https://getbootstrap.com/docs/4.4/examples/pricing/#">Resource</a></li>
+            <li><a class="text-muted" href="https://getbootstrap.com/docs/4.4/examples/pricing/#">Resource name</a></li>
+            <li><a class="text-muted" href="https://getbootstrap.com/docs/4.4/examples/pricing/#">Another resource</a></li>
+            <li><a class="text-muted" href="https://getbootstrap.com/docs/4.4/examples/pricing/#">Final resource</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="https://getbootstrap.com/docs/4.4/examples/pricing/#">Team</a></li>
+            <li><a class="text-muted" href="https://getbootstrap.com/docs/4.4/examples/pricing/#">Locations</a></li>
+            <li><a class="text-muted" href="https://getbootstrap.com/docs/4.4/examples/pricing/#">Privacy</a></li>
+            <li><a class="text-muted" href="https://getbootstrap.com/docs/4.4/examples/pricing/#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- scripts and dependencies -->
   <!-- jquery and bootstrap setup -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <!-- FilePond plugin script -->
+  <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+  <script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+  <script src="https://unpkg.com/filepond-plugin-image-transform/dist/filepond-plugin-image-transform.js"></script>
+  <!-- FilePond scripts -->
+  <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+  <!-- Load ONNX.js -->
+  <script src="https://cdn.jsdelivr.net/npm/onnxjs/dist/onnx.min.js"></script>
   <!-- javascript -->
   <script type="text/javascript" src="assets/js/index.js"></script>
 </body>
